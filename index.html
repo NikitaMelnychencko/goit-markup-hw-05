@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
-  <header class="page-header">
+  <header class="header">
     <div class="container nav">
       <nav class="main-nav">
         <a href="./index.html" class="logo part-one" lang="en">Web<span class="logo part-two">Studio</span></a>
@@ -280,12 +280,13 @@
       </div>
     </div>
   </footer>
-<script>
-    const { height: pageHeaderHeight } = document
-     .querySelector(".page-header")
+  <script>
+    const { height : HeaderHeight } = document
+     .querySelector(".header")
      .getBoundingClientRect();
     
-    document.body.style.paddingTop= '${pageHeaderHeight}px';  
+    document.body.style.paddingTop= `${HeaderHeight}px`;
+      
   </script>
 </body>
 </html>
