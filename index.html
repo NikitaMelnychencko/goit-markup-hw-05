@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
-  <header class="header">
+  <header class="page-header">
     <div class="container nav">
       <nav class="main-nav">
         <a href="./index.html" class="logo part-one" lang="en">Web<span class="logo part-two">Studio</span></a>
@@ -86,9 +86,30 @@
       <div class="container">
         <h2 class="section-title">Чем мы занимаемся</h2>
         <ul class="doing-list">
-          <li class="item"> <img class="card-image no-gap" src="./images/leptop.jpg" alt="ноутбук" width="370" height="294"> </li>
-          <li class="item"> <img class="card-image no-gap" src="./images/phone.jpg" alt="телефон" width="370" height="294"> </li>
-          <li class="item"> <img class="card-image no-gap" src="./images/tablet.jpg" alt="планшет" width="370" height="294"> </li>
+          <li class="item"> 
+            <div class="product-thumb">
+              <img class="card-image no-gap" src="./images/leptop.jpg" alt="ноутбук" width="370" height="294"> 
+              <div class="box-1">
+                <h3 class="title">Десктопные приложения</h3>
+              </div>              
+            </div>
+          </li>
+          <li class="item">
+            <div class="product-thumb">
+              <img class="card-image no-gap" src="./images/phone.jpg" alt="телефон" width="370" height="294">
+              <div class="box-2">
+                <h3 class="title">Мобильные приложения</h3>
+              </div>              
+            </div>
+          </li>
+          <li class="item">
+            <div class="product-thumb">
+              <img class="card-image no-gap" src="./images/tablet.jpg" alt="планшет" width="370" height="294">
+              <div class="box-3">
+                <h3 class="title">Дизайнерские решения</h3>
+              </div>               
+            </div>
+          </li>
         </ul>
       </div>
     </section>
@@ -259,5 +280,12 @@
       </div>
     </div>
   </footer>
+<script>
+    const { height: pageHeaderHeight } = document
+     .querySelector(".page-header")
+     .getBoundingClientRect();
+    
+    document.body.style.paddingTop= '${pageHeaderHeight}px';  
+  </script>
 </body>
 </html>
