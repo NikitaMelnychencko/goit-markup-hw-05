@@ -576,7 +576,23 @@ h3 {
   opacity: 0;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.section.portfolio .product-thumb:hover::before {
+.text-before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(294px);
+
+  width: 100%;
+  padding: 63px 24px;
+  font-size: 18px;
+  line-height: 1.55;
+
+  color: var(--primary-background-color);
+  opacity: 0;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.item-link:hover .product-thumb::before,
+.item-link:hover .text-before {
   transform: translateY(0);
   opacity: 1;
 }
