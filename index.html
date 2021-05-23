@@ -36,8 +36,18 @@
     <!--Banner-->
     <section class="banner">
       <h1 class="banner-title">Эффективные решения <br> для вашего бизнеса</h1>
-      <button class="buttun primary" type="button"> Заказать услугу </button>
+      <button class="buttun primary" data-modal-open type="button"> Заказать услугу </button>
     </section>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="buttun close" data-modal-close>
+          <span class="hide">Закрыть</span>
+          <svg class="svg-buttun">
+            <use href="./images/icon.svg#icon-close-black"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
     <!--particular qualities-->
     <section class="section">
       <div class="container">
@@ -280,6 +290,7 @@
       </div>
     </div>
   </footer>
+  
   <script>
     const { height : HeaderHeight } = document
      .querySelector(".header")
@@ -288,5 +299,6 @@
     document.body.style.paddingTop= `${HeaderHeight}px`;
       
   </script>
+  <script src="./js/modal.js"></script>
 </body>
 </html>
